@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2563EB;
+  --color-brand-light: #3B82F6;
+  --color-brand-dark: #1D4ED8;
+  --color-accent-yellow: #FFC629;
+  --color-accent-red: #FF5A4A;
+  --color-bg-warm: #F9F7F4;
+  --color-muted-blue: #A7B8D6;
+  --font-display: 'Nunito', sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: 'Nunito', system-ui, sans-serif;
+    background-color: #F9F7F4;
+  }
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-brand text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-dark transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  .btn-accent {
+    @apply bg-accent-yellow text-gray-900 px-6 py-3 rounded-xl font-bold hover:brightness-110 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  .btn-red {
+    @apply bg-accent-red text-white px-6 py-3 rounded-xl font-bold hover:brightness-110 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 p-6;
+  }
+}
